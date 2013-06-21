@@ -18,6 +18,8 @@
 		2912F84617713C85000FE843 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2912F84517713C84000FE843 /* Default-568h@2x.png */; };
 		2912F84917713C85000FE843 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2912F84717713C85000FE843 /* MainStoryboard.storyboard */; };
 		2912F84C17713C85000FE843 /* IAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2912F84B17713C85000FE843 /* IAViewController.m */; };
+		2912F85317713CE3000FE843 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2912F85217713CE3000FE843 /* Accounts.framework */; };
+		2912F85617713D5A000FE843 /* IAAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2912F85517713D5A000FE843 /* IAAccountsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		2912F84817713C85000FE843 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2912F84A17713C85000FE843 /* IAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAViewController.h; sourceTree = "<group>"; };
 		2912F84B17713C85000FE843 /* IAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAViewController.m; sourceTree = "<group>"; };
+		2912F85217713CE3000FE843 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		2912F85417713D5A000FE843 /* IAAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAAccountsViewController.h; sourceTree = "<group>"; };
+		2912F85517713D5A000FE843 /* IAAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAAccountsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2912F85317713CE3000FE843 /* Accounts.framework in Frameworks */,
 				2912F83017713C84000FE843 /* UIKit.framework in Frameworks */,
 				2912F83217713C84000FE843 /* Foundation.framework in Frameworks */,
 				2912F83417713C84000FE843 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +62,7 @@
 		2912F82317713C84000FE843 = {
 			isa = PBXGroup;
 			children = (
+				2912F85217713CE3000FE843 /* Accounts.framework */,
 				2912F83517713C84000FE843 /* TweetBook */,
 				2912F82E17713C84000FE843 /* Frameworks */,
 				2912F82D17713C84000FE843 /* Products */,
@@ -89,6 +96,8 @@
 				2912F84A17713C85000FE843 /* IAViewController.h */,
 				2912F84B17713C85000FE843 /* IAViewController.m */,
 				2912F83617713C84000FE843 /* Supporting Files */,
+				2912F85417713D5A000FE843 /* IAAccountsViewController.h */,
+				2912F85517713D5A000FE843 /* IAAccountsViewController.m */,
 			);
 			path = TweetBook;
 			sourceTree = "<group>";
@@ -177,6 +186,7 @@
 				2912F83C17713C84000FE843 /* main.m in Sources */,
 				2912F84017713C84000FE843 /* IAAppDelegate.m in Sources */,
 				2912F84C17713C85000FE843 /* IAViewController.m in Sources */,
+				2912F85617713D5A000FE843 /* IAAccountsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
