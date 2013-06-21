@@ -27,7 +27,12 @@
 {
     [super viewDidLoad];
 	self.accounts = [[NSMutableArray alloc] init];
+    
     [self retrieveAccounts:ACAccountTypeIdentifierTwitter options:nil];
+    
+    NSDictionary *fbOptions = @{ ACFacebookAppIdKey: @"19831117", ACFacebookPermissionsKey: @[@"email", @"user_about_me"] };
+    
+    [self retrieveAccounts:ACAccountTypeIdentifierFacebook options:fbOptions];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,7 +55,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
     ACAccount *account = self.accounts[indexPath.row];
-    cell.textLabel.text = account.accountDescription;
+    if ([account.accountType.identifier isEqualToString:ACAccountTypeIdentifierTwitter])
+        cell.textLabel.text = account.accountDescription;
+    else
+        cell.textLabel.text = account.username;
+
     
     return cell;
 }
