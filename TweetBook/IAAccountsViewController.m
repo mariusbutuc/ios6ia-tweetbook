@@ -7,6 +7,7 @@
 //
 
 #import "IAAccountsViewController.h"
+#import "IAStreamViewController.h"
 
 @interface IAAccountsViewController ()
 
@@ -30,7 +31,7 @@
     
     [self retrieveAccounts:ACAccountTypeIdentifierTwitter options:nil];
     
-    NSDictionary *fbOptions = @{ ACFacebookAppIdKey: @"19831117", ACFacebookPermissionsKey: @[@"email", @"user_about_me"] };
+    NSDictionary *fbOptions = @{ ACFacebookAppIdKey: @"392333654220470", ACFacebookPermissionsKey: @[@"email", @"user_about_me"] };
     
     [self retrieveAccounts:ACAccountTypeIdentifierFacebook options:fbOptions];
 }
@@ -79,6 +80,16 @@
             });
         }
              }];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *selectedIndex = self.tableView.indexPathForSelectedRow;
+    ACAccount *account = [self.accounts objectAtIndex:selectedIndex.row];
+    
+    IAStreamViewController *view = [segue destinationViewController];
+    view.title = [self.tableView cellForRowAtIndexPath:selectedIndex].textLabel.text;
+    view.account = account;
 }
 
 @end

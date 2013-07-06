@@ -20,6 +20,8 @@
 		2912F84C17713C85000FE843 /* IAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2912F84B17713C85000FE843 /* IAViewController.m */; };
 		2912F85317713CE3000FE843 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2912F85217713CE3000FE843 /* Accounts.framework */; };
 		2912F85617713D5A000FE843 /* IAAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2912F85517713D5A000FE843 /* IAAccountsViewController.m */; };
+		2966F8A1177511A90040F62B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2966F8A0177511A90040F62B /* Social.framework */; };
+		2966F8A4177511D40040F62B /* IAStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2966F8A3177511D40040F62B /* IAStreamViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,9 @@
 		2912F85217713CE3000FE843 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		2912F85417713D5A000FE843 /* IAAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAAccountsViewController.h; sourceTree = "<group>"; };
 		2912F85517713D5A000FE843 /* IAAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAAccountsViewController.m; sourceTree = "<group>"; };
+		2966F8A0177511A90040F62B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		2966F8A2177511D40040F62B /* IAStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAStreamViewController.h; sourceTree = "<group>"; };
+		2966F8A3177511D40040F62B /* IAStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAStreamViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2966F8A1177511A90040F62B /* Social.framework in Frameworks */,
 				2912F85317713CE3000FE843 /* Accounts.framework in Frameworks */,
 				2912F83017713C84000FE843 /* UIKit.framework in Frameworks */,
 				2912F83217713C84000FE843 /* Foundation.framework in Frameworks */,
@@ -62,6 +68,7 @@
 		2912F82317713C84000FE843 = {
 			isa = PBXGroup;
 			children = (
+				2966F8A0177511A90040F62B /* Social.framework */,
 				2912F85217713CE3000FE843 /* Accounts.framework */,
 				2912F83517713C84000FE843 /* TweetBook */,
 				2912F82E17713C84000FE843 /* Frameworks */,
@@ -98,6 +105,8 @@
 				2912F83617713C84000FE843 /* Supporting Files */,
 				2912F85417713D5A000FE843 /* IAAccountsViewController.h */,
 				2912F85517713D5A000FE843 /* IAAccountsViewController.m */,
+				2966F8A2177511D40040F62B /* IAStreamViewController.h */,
+				2966F8A3177511D40040F62B /* IAStreamViewController.m */,
 			);
 			path = TweetBook;
 			sourceTree = "<group>";
@@ -187,6 +196,7 @@
 				2912F84017713C84000FE843 /* IAAppDelegate.m in Sources */,
 				2912F84C17713C85000FE843 /* IAViewController.m in Sources */,
 				2912F85617713D5A000FE843 /* IAAccountsViewController.m in Sources */,
+				2966F8A4177511D40040F62B /* IAStreamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +319,7 @@
 				2912F85117713C85000FE843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

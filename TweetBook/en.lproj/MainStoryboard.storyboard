@@ -15,14 +15,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5pi-SZ-SMf">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="accountCell" id="Vmc-8X-FCd">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="accountCell" id="Vmc-8X-FCd">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="aMV-y2-Mkl" kind="push" id="5kd-Y9-h1J"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -48,6 +51,45 @@
             </objects>
             <point key="canvasLocation" x="924" y="202"/>
         </scene>
+        <!--Stream View Controller-->
+        <scene sceneID="Az5-AA-tnp">
+            <objects>
+                <viewController id="aMV-y2-Mkl" customClass="IAStreamViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RVy-VS-GLd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VwT-f4-xra">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aMV-y2-Mkl" id="RxF-Sa-h5h"/>
+                                    <outlet property="delegate" destination="aMV-y2-Mkl" id="yLB-8g-JlB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VwT-f4-xra" firstAttribute="top" secondItem="RVy-VS-GLd" secondAttribute="top" type="default" id="5dP-N3-GYk"/>
+                            <constraint firstItem="VwT-f4-xra" firstAttribute="leading" secondItem="RVy-VS-GLd" secondAttribute="leading" type="default" id="RaN-vO-Pyi"/>
+                            <constraint firstItem="VwT-f4-xra" firstAttribute="trailing" secondItem="RVy-VS-GLd" secondAttribute="trailing" type="default" id="Whr-u7-PNp"/>
+                            <constraint firstItem="VwT-f4-xra" firstAttribute="bottom" secondItem="RVy-VS-GLd" secondAttribute="bottom" type="default" id="zXy-fH-lyE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xda-RU-A9b">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="YAi-90-tdE">
+                            <connections>
+                                <action selector="postToStream:" destination="aMV-y2-Mkl" id="IWa-Mc-hnv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="VwT-f4-xra" id="CDv-KJ-q1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcX-RX-gIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1397" y="202"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="SpE-of-XYV">
             <objects>
@@ -71,6 +113,13 @@
         <class className="IAAccountsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IAAccountsViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="IAStreamViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IAStreamViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="postToStream:"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
